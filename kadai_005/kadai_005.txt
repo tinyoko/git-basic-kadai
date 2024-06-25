@@ -1,0 +1,79 @@
+yasuharuyokoi@yym1mbp samurai % mkdir 240625_git_challenge
+yasuharuyokoi@yym1mbp samurai % cd 240625_git_challenge 
+yasuharuyokoi@yym1mbp 240625_git_challenge % ls
+yasuharuyokoi@yym1mbp 240625_git_challenge % ls
+yasuharuyokoi@yym1mbp 240625_git_challenge % pwd
+/Users/yasuharuyokoi/samurai/240625_git_challenge
+yasuharuyokoi@yym1mbp 240625_git_challenge % git init git_challenge
+Initialized empty Git repository in /Users/yasuharuyokoi/samurai/240625_git_challenge/git_challenge/.git/
+yasuharuyokoi@yym1mbp 240625_git_challenge % pwd
+/Users/yasuharuyokoi/samurai/240625_git_challenge
+yasuharuyokoi@yym1mbp 240625_git_challenge % ls
+git_challenge
+yasuharuyokoi@yym1mbp 240625_git_challenge % ls -la
+total 0
+drwxr-xr-x   3 yasuharuyokoi  staff   96  6 25 21:48 .
+drwxr-xr-x  10 yasuharuyokoi  staff  320  6 25 21:47 ..
+drwxr-xr-x   3 yasuharuyokoi  staff   96  6 25 21:48 git_challenge
+yasuharuyokoi@yym1mbp 240625_git_challenge % ls
+git_challenge
+yasuharuyokoi@yym1mbp 240625_git_challenge % cd git_challenge 
+yasuharuyokoi@yym1mbp git_challenge % ls
+yasuharuyokoi@yym1mbp git_challenge % ls -a
+.	..	.git
+yasuharuyokoi@yym1mbp git_challenge % vi hello_world.txt
+yasuharuyokoi@yym1mbp git_challenge % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+yasuharuyokoi@yym1mbp git_challenge % git add hello_world.txt 
+yasuharuyokoi@yym1mbp git_challenge % git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   hello_world.txt
+
+yasuharuyokoi@yym1mbp git_challenge % git commit -m "hello_world.txtを追加"
+[main (root-commit) 21d23dc] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+yasuharuyokoi@yym1mbp git_challenge % git status
+On branch main
+nothing to commit, working tree clean
+yasuharuyokoi@yym1mbp git_challenge % git branch
+* main
+yasuharuyokoi@yym1mbp git_challenge % vi hello_world.txt 
+yasuharuyokoi@yym1mbp git_challenge % git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello_world.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+yasuharuyokoi@yym1mbp git_challenge % git add hello_world.txt 
+yasuharuyokoi@yym1mbp git_challenge % git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   hello_world.txt
+
+yasuharuyokoi@yym1mbp git_challenge % git commit -m "日本語訳を追記"        
+[main 44981b8] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+yasuharuyokoi@yym1mbp git_challenge % git status
+On branch main
+nothing to commit, working tree clean
+
+yasuharuyokoi@yym1mbp git_challenge % git log --oneline
+44981b8 (HEAD -> main) 日本語訳を追記
+21d23dc hello_world.txtを追加
